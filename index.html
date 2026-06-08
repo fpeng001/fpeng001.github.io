@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>fulin portfolio</title>
+  <link href="style.css" rel="stylesheet" type="text/css" media="all">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <div>
+          <h1>FULIN</h1>
+          <small> PORTFOLIO WEBSITE </small>
+        </div>
+
+      </div>
+
+      <div class="card-content">
+        <div class="buttonslist">
+          <button label="about">ABOUT</button> <br>
+          <button label="resume">RESUMÉ</button> <br>
+          <button label="projects">PROJECTS</button> <br>
+        </div>
+        <div class="right-side">
+          <!-- About -->
+          <div class="section" id="about">
+            <h1>ABOUT</h1>
+            <p>heyo! my name is Fulin! i'm a sophomore at Worcester Polytechnic Institute
+              studying <b>computer science </b> and <b>interactive media & game development</b> <small>(with a concentration in technical art)</small></p>
+            <br>
+            <p>things i've recently been into:</p>
+            <ul>
+              <li>designing tarot cards!</li>
+              <li>learning bass!</li>
+              <li>tomodachi life: living the dream!</li>
+            </ul>
+            <br>
+            <p>my contact information is in the footer below! feel free to reach out about anything </p>
+
+          </div>
+          <!-- Resume -->
+          <div class="section" id="resume">
+            <h1>RESUMÉ</h1>
+            <a href="media/Resume.pdf" download="Resume.pdf"> (click here to download pdf)</a>
+            <object data="media/Resume.pdf" width="650px"></object>
+          </div>
+          <!-- Projects -->
+          <div class="section" id="projects">
+            <h1>PROJECTS</h1>
+            <p>under construction :(</p>
+            <p>personal art/doodles to be shared on request</p>
+            <br>
+            <h2>CONTENTS</h2>
+            <ul>
+              <li><a href="#project-art">click here to jump to Illustrations</a></li>
+              <li><a href="#project-code">click here to jump to Programming Work</a></li>
+            </ul>
+            <br>
+            ------------------------------------------------------------------------------------------------------------
+            <br>
+            <h2 id="project-art">ILLUSTRATIONS</h2>
+            <a href="#" onclick="ToggleVisibility('projectitem1'); return false;">Digital Painting <small>(click to hide)</small></a>
+            <object class="projectitem1" data="media/roboburger.png" width="650px" border="1px solid"></object>
+            <br><br>
+            <a href="#" onclick="ToggleVisibility('projectitem2'); return false;">Digital Master Study</a>
+            <object class="projectitem2" data="media/masterstudy.png" width="650px"></object>
+            <br><br>
+            <a href="#" onclick="ToggleVisibility('projectitem3'); return false;">Concept Art</a>
+            <a href="media/Concept_Art.pdf" download="Concept_Art.pdf"> <small>(click here to download)</small></a>
+            <object class="projectitem3" data="media/Concept_Art.pdf" width="650px" height="500px"></object>
+            <br><br>
+            <a href="#" onclick="ToggleVisibility('projectitem4'); return false;">Texture Variations</a>
+            <object class="projectitem4" data="media/colorvariation.webp" width="650px"></object>
+            <br><br>
+            <a href="#" onclick="ToggleVisibility('projectitem5'); return false;">Poster Designs</a>
+            <br><br>
+            <object class="projectitem5" data="media/seniornight.png" width="315px"></object>
+            <object class="projectitem5" data="media/LiveattheCC4-10.png" width="315px"></object>
+            <br><br>
+            ------------------------------------------------------------------------------------------------------------
+            <br>
+            <h2 id="project-code">PROGRAMMING WORK</h2>
+            <a href="https://github.com/WPI-CS3733-2025B/team-fred">Team Fred Project Manager Website <small>(click to visit)</small></a> <br>
+            <p>A webapp my small team developed over ~4 weeks in our Software Engineering course. I mainly used Python, Flask, and Bootstrap. It helps 'Professors' and 'Students' manage what projects they are a part of. Generative AI was used in this project as a learning requirement for this assignment, and for debugging.</p>
+            <br>
+            <a href="https://github.com/WPI-CS3733-2025B/smileapp-fpeng3">SmileApp</a>
+            <p>A project made in my Software Engineering course that allows users to post and share their smiles, with liking/disliking and filtering features. Also made using Flask and Bootstrap. Generative AI was experimented with as a learning requirement for this assignment.</p>
+            <br>
+            <a href="https://auburndino.itch.io/project-auburn">Project Auburn</a>
+            <p>A recreation of Google's Dino Game using Unity and C#. Additional features were added. Give it a try!</p>
+            <br>
+            <a href="https://github.com/fpeng3/slightly-simple">Slightly Simple</a>
+            <p>A simple, non-distracting, monospaced theme for Firefox.</p>
+            <br>
+            <a href="">This website!</a>
+            <p>A static portfolio website I built as practice with HTML, CSS, and JavaScript.</p>
+
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="card-footer">
+        <div>
+          <a href="https://www.linkedin.com/in/fulinp/" class="fab fa-linkedin"></a>
+          <a href="https://www.instagram.com/ohnyo_rings/" class="fab fa-instagram"></a>
+          <a href="#" class="fab fa-youtube" onclick="alert('i dont have one (•᷄ᴗ•᷅ ᵕ)')"></a>
+        </div>
+        <div>
+          fulinp53@gmail.com • 609-510-4029
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+
+  <script>        //Buttons stuff
+    const buttons = document.querySelectorAll(".buttonslist button");
+    const sections = document.querySelectorAll(".right-side .section");
+
+    buttons.forEach(button => {
+
+      button.addEventListener("click", () => {
+        const sectionId = button.getAttribute("label");
+
+        //shjow sections/hide them
+        sections.forEach(sec => {
+          sec.style.display = (sec.id === sectionId) ? "block" : "none";
+        });
+
+        // udpate active button
+        buttons.forEach(btn => btn.classList.remove("active"));
+        button.classList.add("active");
+
+      });
+
+    });
+
+    // initialize first page
+    buttons[0].classList.add("active");
+
+    sections.forEach((sec, index) => {
+      sec.style.display = (index === 0) ? "block" : "none";
+    });
+
+
+    //project items https://stackoverflow.com/a/9534506
+    function ToggleVisibility(divClass) {
+      var els = document.getElementsByClassName(divClass);
+      for (var i = 0; i < els.length; i++) {
+        els[i].style.visibility = els[i].style.visibility == "hidden" ? "visible" : "hidden";
+        els[i].style.maxHeight = els[i].style.visibility == "hidden" ? "0px" : "1000px";
+        els[i].style.transition = "max-height 0.5s ease";
+      }
+    }
+
+
+  </script>
+
+
+
+</body>
+
+</html>
