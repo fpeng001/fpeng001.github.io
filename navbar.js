@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const pageContent = document.body.innerHTML;
-    const currentPage = window.location.pathname.split('/').pop();
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
     document.body.innerHTML = `
         <div class="container">
