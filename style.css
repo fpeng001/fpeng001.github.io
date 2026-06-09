@@ -6,7 +6,7 @@
 :root {
     --bg-color: hsl(0, 0%, 94%);
     --card-color: white;
-    --shadow-color: rgb(143, 141, 139);
+    --shadow-color: hsla(0, 0%, 0%, 0.4);
     --text-color: black;
     --primary-color: rgb(102, 47, 255);
     --primary-color-push: magenta;
@@ -21,13 +21,13 @@
     --primary-color: greenyellow;     
     --primary-color-push: magenta;
     --primary-color-active: rgb(102, 47, 255);
-    --primary-border-color: rgb(44, 44, 44);
+    --primary-border-color: #32313c;
     --button-text-color: white;
     --button-hover-text-color: black;
 
-    --bg-color: rgb(19, 19, 19);
-    --card-color: rgb(29, 29, 29);
-    --shadow-color: black;
+    --bg-color: #15141a;
+    --card-color: #1c1b22;
+    --shadow-color: hsla(0, 0%, 0%, 0.4);
     --text-color: white;
 }
 
