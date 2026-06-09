@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>fulin portfolio</title>
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <script>document.documentElement.style.visibility = 'hidden';</script>
+    <script src="navbar.js" defer></script>
+</head>
+
+<body>
+
+    <h1>PROJECTS</h1>
+    <p>under construction :(</p>
+    <p>personal art/doodles to be shared on request</p>
+    <br>
+    <h2>CONTENTS</h2>
+    <ul>
+        <li><a href="#project-art">click here to jump to Illustrations</a></li>
+        <li><a href="#project-code">click here to jump to Programming Work</a></li>
+    </ul>
+    <br>
+    ------------------------------------------------------------------------------------------------------------
+    <br>
+    <h2 id="project-art">ILLUSTRATIONS</h2>
+    <a href="#" onclick="ToggleVisibility('projectitem1'); return false;">Digital Painting <small>(click to
+            hide)</small></a>
+    <object class="projectitem1" data="media/roboburger.png" width="650px" border="1px solid"></object>
+    <br><br>
+    <a href="#" onclick="ToggleVisibility('projectitem2'); return false;">Digital Master Study</a>
+    <object class="projectitem2" data="media/masterstudy.png" width="650px"></object>
+    <br><br>
+    <a href="#" onclick="ToggleVisibility('projectitem3'); return false;">Concept Art</a>
+    <a href="media/Concept_Art.pdf" download="Concept_Art.pdf"> <small>(click here to download)</small></a>
+    <object class="projectitem3" data="media/Concept_Art.pdf" width="650px" height="500px"></object>
+    <br><br>
+    <a href="#" onclick="ToggleVisibility('projectitem4'); return false;">Texture Variations</a>
+    <object class="projectitem4" data="media/colorvariation.webp" width="650px"></object>
+    <br><br>
+    <a href="#" onclick="ToggleVisibility('projectitem5'); return false;">Poster Designs</a>
+    <br><br>
+    <object class="projectitem5" data="media/seniornight.png" width="315px"></object>
+    <object class="projectitem5" data="media/LiveattheCC4-10.png" width="315px"></object>
+    <br><br>
+    ------------------------------------------------------------------------------------------------------------
+    <br>
+    <h2 id="project-code">PROGRAMMING WORK</h2>
+    <a href="https://github.com/WPI-CS3733-2025B/team-fred">Team Fred Project Manager Website <small>(click to
+            visit)</small></a> <br>
+    <p>A webapp my small team developed over ~4 weeks in our Software Engineering course. I mainly used Python,
+        Flask, and Bootstrap. It helps 'Professors' and 'Students' manage what projects they are a part of.
+        Generative AI was used in this project as a learning requirement for this assignment, and for debugging.
+    </p>
+    <br>
+    <a href="https://github.com/WPI-CS3733-2025B/smileapp-fpeng3">SmileApp</a>
+    <p>A project made in my Software Engineering course that allows users to post and share their smiles, with
+        liking/disliking and filtering features. Also made using Flask and Bootstrap. Generative AI was
+        experimented with as a learning requirement for this assignment.</p>
+    <br>
+    <a href="https://auburndino.itch.io/project-auburn">Project Auburn</a>
+    <p>A recreation of Google's Dino Game using Unity and C#. Additional features were added. Give it a try!</p>
+    <br>
+    <a href="https://github.com/fpeng3/slightly-simple">Slightly Simple</a>
+    <p>A simple, non-distracting, monospaced theme for Firefox.</p>
+    <br>
+    <a href="">This website!</a>
+    <p>A static portfolio website I built as practice with HTML, CSS, and JavaScript.</p>
+
+</body>
+
+<script>
+     //project items https://stackoverflow.com/a/9534506
+    function ToggleVisibility(divClass) {
+      var els = document.getElementsByClassName(divClass);
+      for (var i = 0; i < els.length; i++) {
+        els[i].style.visibility = els[i].style.visibility == "hidden" ? "visible" : "hidden";
+        els[i].style.maxHeight = els[i].style.visibility == "hidden" ? "0px" : "1000px";
+        els[i].style.transition = "max-height 0.5s ease";
+      }
+    }
+</script>
+
+</html>

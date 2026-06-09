@@ -1,0 +1,53 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const pageContent = document.body.innerHTML;
+    const currentPage = window.location.pathname.split('/').pop();
+
+    document.body.innerHTML = `
+        <div class="container">
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h1>FULIN</h1>
+                        <small> PORTFOLIO WEBSITE </small>
+                    </div>
+
+                </div>
+    
+                <div class="card-content">
+                    <div class="buttonslist">
+                        <button onclick="window.location.href='index.html'">ABOUT</button> <br>
+                        <button onclick="window.location.href='resume.html'">RESUMÉ</button> <br>
+                        <button onclick="window.location.href='projects.html'">PROJECTS</button> <br>
+                    </div>
+                    <div class="right-side">
+                            <div class="section" id="page-content">
+                                ${pageContent}
+                            </div>
+                    </div>
+                </div>
+
+                <div class="card-footer">
+                    <div>
+                        <a href="https://www.linkedin.com/in/fulinp/" class="fab fa-linkedin"></a>
+                        <a href="https://www.instagram.com/ohnyo_rings/" class="fab fa-instagram"></a>
+                        <a href="#" class="fab fa-youtube" onclick="alert('i dont have one (•᷄ᴗ•᷅ ᵕ)')"></a>
+                    </div>
+                    <div>
+                        <a href="mailto:fulinp53@gmail.com">fulinp53@gmail.com</a> • 609-510-4029
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    `;
+
+    // detect acttive page thing so that i can highlight it green
+    document.querySelectorAll('.buttonslist button').forEach(btn => {
+        const href = btn.getAttribute('onclick').match(/'(.+?)'/)[1];
+        if (href === currentPage) btn.classList.add('active');
+    });
+
+    //this is so it doesnt flash the unstylized stuff before the javascript loads, visibility is set to hidden in the css
+    document.body.style.visibility = 'visible';
+
+});

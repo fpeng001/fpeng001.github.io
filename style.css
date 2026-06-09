@@ -111,7 +111,6 @@ a {
 }
 
 .buttonslist button.active {
-
     background-color: greenyellow;
 
 }
@@ -133,28 +132,6 @@ a {
     height: auto;
     border-radius: 0px;
     cursor: pointer;
-}
-
-
-.images img:hover {
-    transform: scale(1.03);
-    transition: 0.2s;
-}
-
-#lightbox {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.8);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-}
-
-#lightbox img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 0px;
 }
 
 @media (max-width: 650px) {
