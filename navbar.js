@@ -10,7 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         <h1>FULIN</h1>
                         <small> PORTFOLIO WEBSITE </small>
                     </div>
-
+                    <div class="header-buttons">
+                        <button id="theme-toggle">LIGHT</button>
+                    </div>
                 </div>
     
                 <div class="card-content">
@@ -49,5 +51,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //this is so it doesnt flash the unstylized stuff before the javascript loads, visibility is set to hidden in the css
     document.body.style.visibility = 'visible';
+
+
+
+    // theme toggle
+    const toggleButton = document.getElementById('theme-toggle');
+    const root = document.documentElement;
+
+    // check for preferences and saved themes
+    const saved = localStorage.getItem('theme');
+
+    if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        root.setAttribute('data-theme', 'dark');
+        toggleButton.textContent = 'DARK';
+    }
+
+    toggleButton.addEventListener('click', () => {
+        const isDark = root.getAttribute('data-theme') === 'dark';
+        root.setAttribute('data-theme', isDark ? 'light' : 'dark');
+        toggleButton.textContent = isDark ? 'LIGHT' : 'DARK';
+        localStorage.setItem('theme', isDark ? 'light' : 'dark');
+    });
+
 
 });

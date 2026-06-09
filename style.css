@@ -3,11 +3,54 @@
     src: url('fonts/PixelOperator/PixelOperator.ttf') format('truetype');
 }
 
+:root {
+    --bg-color: hsl(0, 0%, 94%);
+    --card-color: white;
+    --shadow-color: rgb(143, 141, 139);
+    --text-color: black;
+    --primary-color: rgb(102, 47, 255);
+    --primary-color-push: magenta;
+    --primary-color-active: greenyellow;
+    --primary-border-color: darkgray;
+    --secondary-border-color: black;
+    --button-text-color: black;
+    --button-hover-text-color: white;
+}
+
+[data-theme="dark"] { /* https://css-tricks.com/dark-modes-with-css/ */
+    --primary-color: greenyellow;     
+    --primary-color-push: magenta;
+    --primary-color-active: rgb(102, 47, 255);
+    --primary-border-color: rgb(44, 44, 44);
+    --button-text-color: white;
+    --button-hover-text-color: black;
+
+    --bg-color: rgb(19, 19, 19);
+    --card-color: rgb(29, 29, 29);
+    --shadow-color: black;
+    --text-color: white;
+}
 
 * {
     font-family: PixelOperator;
+    color: var(--text-color);
     box-sizing: border-box;
     margin: 0px;
+}
+
+a, a:visited {
+    color: var(--primary-color);
+}
+
+.header-buttons button {
+    cursor: pointer;
+    background-color: inherit;
+    border-radius: 0px;
+    font-size: 1.2rem;
+    padding: 12px 10px;
+    margin-left: 15px;
+    border: none;
+    text-align: center;
 }
 
 body {
@@ -20,7 +63,7 @@ a {
 
 .fab,
 .fa {
-    color: rgb(102, 47, 255);
+    color: var(--primary-color);
     font-size: 1em;
     margin-right: 15px;
     text-align: center;
@@ -32,7 +75,7 @@ a {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f0f0f0;
+    background-color: var(--bg-color);
     padding: 20px;
 }
 
@@ -43,19 +86,19 @@ a {
     max-width: 1000px;
     max-height: 600px;
     border-radius: 0px;
-    border: 1px solid black;
-    background-color: white;
+    border: 1px solid var(--secondary-border-color);
+    background-color: var(--card-color);
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    box-shadow: 2px 3px 3px rgb(143, 141, 139);
+    box-shadow: 2px 3px 3px var(--shadow-color);
 }
 
 .card-header {
     display: flex;
     justify-content: space-between;
     padding: 15px 25px 15px 25px;
-    border-bottom: 1px solid darkgray;
+    border-bottom: 1px solid var(--primary-border-color);
 }
 
 .card-content {
@@ -69,7 +112,7 @@ a {
     display: flex;
     justify-content: space-between;
     padding: 10px 25px 10px 25px;
-    border-top: 1px solid darkgray;
+    border-top: 1px solid var(--primary-border-color);
 }
 
 .right-side {
@@ -84,7 +127,7 @@ a {
     align-items: flex-start;
     min-width: 30%;
     padding: 15px;
-    border-right: 1px solid darkgray;
+    border-right: 1px solid var(--primary-border-color);
 }
 
 .buttonslist button {
@@ -100,38 +143,21 @@ a {
 }
 
 .buttonslist button:hover {
-    background-color: rgb(102, 47, 255);
-    color: white;
-
+    background-color: var(--primary-color);
+    color: var(--button-text-color);
 }
 
 .buttonslist button:active {
-    background-color: magenta;
-    color: white;
+    background-color: var(--primary-color-push);
+    color: var(--button-hover-text-color);
 }
 
 .buttonslist button.active {
-    background-color: greenyellow;
-
+    background-color: var(--primary-color-active);
 }
 
 .section {
     padding: 15px;
-}
-
-.images {
-    column-count: 3;
-    column-gap: 8px;
-    background-color: rgb(255, 255, 255);
-}
-
-.images img {
-    border: 1px solid lightgray;
-    width: 100%;
-    margin-bottom: 3px;
-    height: auto;
-    border-radius: 0px;
-    cursor: pointer;
 }
 
 @media (max-width: 650px) {
@@ -159,7 +185,7 @@ a {
         flex-wrap: wrap;
         justify-content: center;
         border-right: none;
-        border-bottom: 1px solid darkgray;
+        border-bottom: 1px solid var(--primary-border-color);
         border-bottom-width: 1px;
         width: 100%;
         padding: 8px;
@@ -172,18 +198,11 @@ a {
         margin: 0px 0px 0px 0px;
     }
 
-    .images {
-        column-count: 2;
-    }
-
     .card-footer {
         flex-direction: column;
         gap: 10px;
         align-items: center;
     }
 
-    .images {
-        column-count: 1;
-    }
 
 }
