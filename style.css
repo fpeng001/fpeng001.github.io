@@ -21,12 +21,12 @@
     --primary-color: greenyellow;     
     --primary-color-push: magenta;
     --primary-color-active: rgb(102, 47, 255);
-    --primary-border-color: #3a3944;
+    --primary-border-color: #42414d;
     --button-text-color: white;
     --button-hover-text-color: black;
 
-    --bg-color: #15141a;
-    --card-color: #1c1b22;
+    --bg-color: #1c1b22;
+    --card-color: #23222b;
     --shadow-color: hsla(0, 0%, 0%, 0.4);
     --text-color: white;
 }
