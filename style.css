@@ -107,7 +107,7 @@ a {
     display: flex;
     flex-direction: row;
     flex: 1;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .card-footer {
@@ -122,6 +122,8 @@ a {
     overflow-y: auto;
     padding: 15px;
 }
+
+
 
 .buttonslist {
     display: flex;
@@ -160,6 +162,20 @@ a {
 
 .section {
     padding: 15px;
+    
+    
+}
+
+.widget-container {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(max-content, 1fr));
+    gap: 5px;
+    margin: -20px;
+}
+
+.widget {
+    border: 1px solid var(--primary-border-color);
+    padding: 5px;
 }
 
 @media (max-width: 650px) {
@@ -205,6 +221,10 @@ a {
         gap: 10px;
         align-items: center;
     }
+
+    .widget-container {
+	grid-template-columns: 1fr 1fr;
+}
 
 
 }

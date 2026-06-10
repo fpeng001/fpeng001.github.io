@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <button onclick="window.location.href='index.html'">ABOUT</button> <br>
                         <button onclick="window.location.href='resume.html'">RESUMÉ</button> <br>
                         <button onclick="window.location.href='projects.html'">PROJECTS</button> <br>
+                        <button onclick="window.location.href='shark.html'">thing</button>
                     </div>
                     <div class="right-side">
                             <div class="section" id="page-content">
