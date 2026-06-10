@@ -4,11 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.body.innerHTML = `
         <div class="container">
-            <div class="card">
+            <div class="card">            
                 <div class="card-header">
                     <div>
                         <h1>FULIN</h1>
-                        <small> PORTFOLIO WEBSITE </small>
+                        <small> PERSONAL WEBSITE </small>
                     </div>
                     <div class="header-buttons">
                         <button id="theme-toggle">LIGHT</button>
@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <a href="https://www.linkedin.com/in/fulinp/" class="fab fa-linkedin"></a>
                         <a href="https://www.instagram.com/ohnyo_rings/" class="fab fa-instagram"></a>
                         <a href="#" class="fab fa-youtube" onclick="alert('i dont have one (•᷄ᴗ•᷅ ᵕ)')"></a>
+                        <a href="https://github.com/fpeng001" class="fab fa-github"></a>
                     </div>
                     <div>
                         <a href="mailto:fulinp53@gmail.com">fulinp53@gmail.com</a> • 609-510-4029
